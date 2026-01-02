@@ -6,11 +6,16 @@ const app = document.getElementById("app");
 
 // 🔑 Login with Google
 const loginSIWG = () => {
-  account.createOAuth2Token({
+  /*account.createOAuth2Token({
     provider: "google",
     success: "https://appwrite-oauth.appwrite.network",
     failure: "https://appwrite-oauth.appwrite.network/fail",
-  });
+  }); */
+  account.createOAuth2Session(
+    OAuthProvider.Google,
+    "https://appwrite-oauth.appwrite.network",
+    "https://appwrite-oauth.appwrite.network/fail"
+  );
 };
 
 // 🚪 Logout
