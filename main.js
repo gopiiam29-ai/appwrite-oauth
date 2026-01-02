@@ -12,7 +12,7 @@ const loginSIWG = () => {
     failure: "https://appwrite-oauth.appwrite.network/fail",
   }); */
   account.createOAuth2Session(
-    OAuthProvider.Google,
+    "google",
     "https://appwrite-oauth.appwrite.network",
     "https://appwrite-oauth.appwrite.network/fail"
   );
