@@ -29,6 +29,7 @@ const logout = async () => {
   }
 };
 
+
 // 🖼️ Render login button
 const renderLogin = () => {
   app.innerHTML = `
@@ -54,6 +55,18 @@ const renderUser = (user) => {
 const init = async () => {
   try {
     const user = await account.get(); // ✅ modern session check
+    console.log("Logged in user:", user);
+    renderUser(user);
+  } catch (error) {
+    console.warn("User not logged in:", error);
+    renderLogin();
+  }
+};
+
+const init = async () => {
+  try {
+    await new Promise((r) => setTimeout(r, 500)); // wait 500ms
+    const user = await account.get();
     console.log("Logged in user:", user);
     renderUser(user);
   } catch (error) {
