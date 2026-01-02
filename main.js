@@ -10,8 +10,10 @@ const app = document.getElementById("app");
 const loginSIWG = async () => {
   account.createOAuth2Session(
     OAuthProvider.Google,
-    "http://localhost:5173",
-    "http://localhost:5173/fail"
+    /*"http://localhost:5173",
+    "http://localhost:5173/fail" */
+    "https://appwrite-oauth.appwrite.network",
+    "https://appwrite-oauth.appwrite.network/fail"
   );
 };
 
