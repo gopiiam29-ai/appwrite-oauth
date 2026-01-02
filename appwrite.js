@@ -13,13 +13,13 @@ export { account }; */
 
 import { Client, Account } from "appwrite";
 
-const { VITE_PROJECT_ID, VITE_ENDPOINT } = import.meta.env;
+const { VITE_PROJECT_ID, VITE_ENDPOINT, VITE_DEV_KEY } = import.meta.env;
 console.log("Appwrite Project:", VITE_PROJECT_ID, "Endpoint:", VITE_ENDPOINT);
 
 const client = new Client()
   .setEndpoint(VITE_ENDPOINT)
-  .setProject(VITE_PROJECT_ID);
-
+  .setProject(VITE_PROJECT_ID)
+  .setDevKey(VITE_DEV_KEY);
 const account = new Account(client);
 
 export { account };
