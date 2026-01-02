@@ -52,7 +52,7 @@ const renderUser = (user) => {
 };
 
 // 🚀 Init app
-const init = async () => {
+/* const init = async () => {
   try {
     const user = await account.get(); // ✅ modern session check
     console.log("Logged in user:", user);
@@ -61,7 +61,7 @@ const init = async () => {
     console.warn("User not logged in:", error);
     renderLogin();
   }
-};
+}; */
 
 const init = async () => {
   try {
