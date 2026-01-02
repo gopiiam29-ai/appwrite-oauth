@@ -21,7 +21,7 @@ const loginSIWG = () => {
 // 🚪 Logout
 const logout = async () => {
   try {
-    await account.deleteSession(); // ✅ no "current" argument
+    await account.deleteSession("current"); // ✅ no "current" argument for v21. ⚠️ must pass "current" in v16
     console.log("Logged out successfully");
     renderLogin();
   } catch (error) {
